@@ -12,10 +12,10 @@ jobs:
       - python/load-cache
       - python/install-deps
       - python/save-cache
-      - run: docker build -t walletjenkins .
       - run:
           command:  python -m pytest
           name: Test
+      - run: docker build -t walletjenkins .
 
 workflows:
   main:
