@@ -12,6 +12,7 @@ jobs:
       - python/load-cache
       - python/install-deps
       - python/save-cache
+      - run: docker build -t company/app:$CIRCLE_BRANCH
       - run:
           command:  python -m pytest
           name: Test
