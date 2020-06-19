@@ -7,7 +7,6 @@ jobs:
   build-and-test:
     executor: python/default
     steps:
-      - setup Dockerfile
       - checkout
       - python/load-cache
       - python/install-deps
