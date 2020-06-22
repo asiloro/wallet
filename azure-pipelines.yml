@@ -24,3 +24,7 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+  
+  - script: |
+    docker build -t walletjenkins .
+  displayName: 'Docker'
