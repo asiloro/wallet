@@ -25,6 +25,4 @@ steps:
     pytest
   displayName: 'pytest'
   
-  - script: |
-    docker build -t walletjenkins .
-  displayName: 'Docker'
+
