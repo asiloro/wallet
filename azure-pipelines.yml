@@ -6,8 +6,7 @@
 trigger:
 - master
 
-
-    pool:
+pool:
   vmImage: 'ubuntu-latest'
 
 steps:
@@ -15,18 +14,14 @@ steps:
   inputs:
     versionSpec: '3.6'
   displayName: 'Use Python 3.66'
-
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
   displayName: 'Install dependencies'
-
 - script: |
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
-  
-  
 
   
 
