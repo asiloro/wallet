@@ -6,11 +6,19 @@
 trigger:
 - master
 
+resources:
+- repo: self
+
 variables:
   tag: '$(Build.BuildId)'
 
-
-pool:
+stages:
+- stage: Build
+  displayName: Build image
+  jobs:  
+  - job: Build
+    displayName: Build
+    pool:
   vmImage: 'ubuntu-latest'
 
 steps:
