@@ -15,7 +15,7 @@ jobs:
       - run:
           command:  python -m pytest
           name: Test
-      - run: docker build -t walletjenkins .
+      - run: docker build -t wallet .
 
 workflows:
   main:
