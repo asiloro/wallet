@@ -10,7 +10,7 @@ RUN apk add --no-cache gcc \
     && ln -sT /usr/local/bin/python /bin/python3 \
     && chmod +x /bin/python3
 
-# APP Install Requirements
+#Install Requirements
 
 COPY . /tmp/${APP_NAME}
 
@@ -19,7 +19,7 @@ WORKDIR /tmp/${APP_NAME}
 RUN pip install -r requirements.txt \
     && pip install -e .
 
-# App Configurations
+# Run
 
 USER 1000:1000
 ENTRYPOINT [ "pytest" ]
