@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             
             steps {
-                echo 'echo building the app'
+                echo 'building the app'
                 bat ('docker build -t walletjenkins .')                
             }
         }
@@ -17,16 +17,7 @@ pipeline {
                 bat ('docker run walletjenkins ')
             }
         }    
-        
-        stage('Deploy') {
-            
-            steps {
-                echo 'echo building the app'
-            }    
-       
-     }
-   
-}
+   }
     post {
         always {
             echo 'This will always run'
